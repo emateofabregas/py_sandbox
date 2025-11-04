@@ -47,8 +47,8 @@ if k().name() == 'choice':
     if n['choice'].value() == 'Custom':
         createInput(checkCustom, 'InputCustom', 'SwitchMap', 1, +100, 0)
     else:
-        print("Input wasn't created it")
+        if checkCustom:
+            nuke.delete(checkCustom)
 else:
-    if checkCustom:
-        nuke.delete(checkCustom)
+    print("Input wasn't created it")
 """
